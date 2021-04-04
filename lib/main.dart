@@ -42,11 +42,31 @@ class MyApp extends StatelessWidget {
                         color: Colors.purple,
                         child: Row(
                           children: [
-                            Container(color: Colors.green),
-                            Container(color: Colors.blueAccent),
-                            Container(color: Colors.red),
-                            Container(color: Colors.grey),
-                            Container(color: Colors.indigo),
+                            Expanded(
+                              child: Container(
+                                color: Colors.green,
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                color: Colors.blueAccent,
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                color: Colors.red,
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                color: Colors.grey,
+                              ),
+                            ),
+                            Expanded(
+                              child: Container(
+                                color: Colors.indigo,
+                              ),
+                            ),
                           ],
                         ),
                       ),
