@@ -19,8 +19,15 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              Container(),
-              Container(),
+              Expanded(
+                child: Container(
+                  color: Colors.blue,
+                ),
+              ),
+              Container(
+                height: 100,
+                color: Colors.green,
+              ),
             ],
           ),
         ),
