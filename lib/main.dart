@@ -25,13 +25,45 @@ class MyApp extends StatelessWidget {
                 ),
               ),
               Container(
-                height: 100,
-                color: Colors.green,
-              ),
+                  height: 100,
+                  color: Colors.green,
+                  child: Column(
+                    children: [
+                      Container(
+                        height: 40,
+                        color: Colors.amber,
+                      ),
+                      Container(
+                        height: 10,
+                        color: Colors.black,
+                      ),
+                      Container(
+                        height: 50,
+                        color: Colors.purple,
+                        child: Row(
+                          children: [
+                            Container(color: Colors.green),
+                            Container(color: Colors.blueAccent),
+                            Container(color: Colors.red),
+                            Container(color: Colors.grey),
+                            Container(color: Colors.indigo),
+                          ],
+                        ),
+                      ),
+                    ],
+                  )),
             ],
           ),
         ),
       ),
     );
   }
+
+  Widget _row() => Row(
+        children: [
+          Icon(Icons.home),
+          Icon(Icons.search),
+          Icon(Icons.file_copy),
+        ],
+      );
 }
