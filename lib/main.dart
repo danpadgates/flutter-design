@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
               ),
               Container(
                   height: 100,
-                  color: Colors.green,
+                  // color: Colors.green,
                   child: Column(
                     children: [
                       Container(
@@ -39,12 +39,27 @@ class MyApp extends StatelessWidget {
                       ),
                       Container(
                         height: 50,
-                        color: Colors.purple,
+                        // color: Colors.purple,
                         child: Row(
                           children: [
                             Expanded(
                               child: Container(
-                                color: Colors.green,
+                                // color: Colors.green,
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.home_outlined,
+                                      color: Colors.grey,
+                                    ),
+                                    Text(
+                                      'Principal',
+                                      style: TextStyle(
+                                        color: Colors.grey,
+                                      ),
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                             Expanded(
