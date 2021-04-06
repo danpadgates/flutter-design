@@ -1,8 +1,13 @@
-import 'package:appprueba/pages/page_profile/parts/part_actions.dart';
-import 'package:appprueba/pages/page_profile/parts/part_appbar.dart';
-import 'package:appprueba/pages/page_profile/parts/part_bottombar.dart';
-import 'package:appprueba/pages/page_profile/parts/part_user_data.dart';
 import 'package:flutter/material.dart';
+
+import 'package:appprueba/items/item_action.dart';
+import 'package:appprueba/items/item_bottombar.dart';
+
+// LISTA DE ALUMNNOS (PARTES)
+part 'parts/part_actions.dart';
+part 'parts/part_appbar.dart';
+part 'parts/part_bottombar.dart';
+part 'parts/part_user_data.dart';
 
 class PageProfile extends StatelessWidget {
   @override

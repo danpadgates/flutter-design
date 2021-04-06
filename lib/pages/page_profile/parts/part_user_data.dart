@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of '../page_profile.dart';
 
 class PartUserData extends StatelessWidget {
   @override

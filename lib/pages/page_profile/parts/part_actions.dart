@@ -1,232 +1,52 @@
-import 'package:flutter/material.dart';
+part of '../page_profile.dart';
 
 class PartActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.notifications_outlined,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'Notificaciones',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              )
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.notifications_outlined,
+          text: 'Notificaciones',
         ),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.close,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'No molestar',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              )
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.close,
+          text: 'No molestar',
         ),
         Divider(),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.person_outline,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'Cuenta',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              )
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.person_outline,
+          text: 'Cuenta',
         ),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.color_lens_outlined,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'Apariencia',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              )
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.color_lens_outlined,
+          text: 'Apariencia',
         ),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.settings_outlined,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'General',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              )
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.settings_outlined,
+          text: 'General',
         ),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.sports_handball_outlined,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'Privacidad',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              )
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.sports_handball_outlined,
+          text: 'Privacidad',
         ),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.group_outlined,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'Lista negra',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              )
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.group_outlined,
+          text: 'Lista negra',
         ),
         Divider(),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.account_balance_outlined,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'Saldo',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              )
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.account_balance_outlined,
+          text: 'Saldo',
         ),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.subscriptions_outlined,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'Suscripciones',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              ),
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.subscriptions_outlined,
+          text: 'Suscripciones',
         ),
         Divider(),
-        Container(
-          padding: EdgeInsets.symmetric(vertical: 8),
-          child: Row(
-            children: [
-              Icon(
-                Icons.info_outline,
-                color: Colors.blue,
-                size: 30,
-              ),
-              Expanded(
-                child: Container(
-                  margin: EdgeInsets.only(left: 8),
-                  child: Text(
-                    'Sobre nosotros',
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
-                  ),
-                ),
-              )
-            ],
-          ),
+        ItemAction(
+          iconData: Icons.info_outline,
+          text: 'Sobre nosotros',
         ),
         Divider(),
         Align(
