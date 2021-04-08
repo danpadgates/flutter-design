@@ -4,7 +4,7 @@ import 'package:appprueba/tareas/cy_tarea.dart';
 import 'package:appprueba/tareas/sebas_tarea.dart';
 import 'package:appprueba/tareas/daniel_tarea.dart';
 
-import 'package:appprueba/pages/page_profile.dart';
+import 'package:appprueba/pages/page_profile/page_profile.dart';
 
 class MyApp extends StatelessWidget {
   final bool showBanner;
@@ -16,7 +16,30 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Mi aplicación',
-      home: PageProfile(),
+      home: Scaffold(
+        appBar: AppBar(
+          // backgroundColor: Colors.transparent,
+          leading: Icon(Icons.arrow_back),
+          title: Text('Título'),
+          actions: [
+            Icon(Icons.menu),
+          ],
+        ),
+        body: Column(
+          children: [
+            ListTile(
+              leading: Icon(Icons.home),
+              title: Text('Principal'),
+              subtitle: Text('Aquí encontrarás...'),
+              trailing: Icon(Icons.arrow_forward_ios),
+              onTap: () {
+                print('Clickeadoooo');
+              },
+            ),
+          ],
+        ),
+        bottomNavigationBar: Text('Abajo pes'),
+      ),
     );
   }
 
