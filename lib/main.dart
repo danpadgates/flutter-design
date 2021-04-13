@@ -1,3 +1,4 @@
+import 'package:appprueba/pages/page_chat/page_chat.dart';
 import 'package:flutter/material.dart';
 
 import 'package:appprueba/tareas/cy_tarea.dart';
@@ -14,33 +15,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Mi aplicación',
-      home: Scaffold(
-        appBar: AppBar(
-          // backgroundColor: Colors.transparent,
-          leading: Icon(Icons.arrow_back),
-          title: Text('Título'),
-          actions: [
-            Icon(Icons.menu),
-          ],
-        ),
-        body: Column(
-          children: [
-            ListTile(
-              leading: Icon(Icons.home),
-              title: Text('Principal'),
-              subtitle: Text('Aquí encontrarás...'),
-              trailing: Icon(Icons.arrow_forward_ios),
-              onTap: () {
-                print('Clickeadoooo');
-              },
-            ),
-          ],
-        ),
-        bottomNavigationBar: Text('Abajo pes'),
-      ),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Mi aplicación',
+        home: PageChat());
   }
 
   Widget _myRow() => Row(
