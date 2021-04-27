@@ -1,3 +1,4 @@
+import 'package:appprueba/utils/app_constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:appprueba/routes/app_routing.dart';
@@ -16,6 +17,6 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'Mi aplicación',
         routes: applicationRoutes(),
-        initialRoute: 'home',
+        initialRoute: AppConstants.PAGE_HOME,
       );
 }
