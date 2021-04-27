@@ -1,3 +1,4 @@
+import 'package:appprueba/utils/app_constants.dart';
 import 'package:flutter/material.dart';
 
 import 'package:appprueba/pages/page_chat/page_chat.dart';
@@ -6,8 +7,7 @@ class PageHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Appbar Home')),
-        body: _withListViewBuilder(context));
+        appBar: AppBar(title: Text('Appbar Home')), body: _withColumn(context));
   }
 
   Widget _withColumn(BuildContext context) => Column(
@@ -17,7 +17,25 @@ class PageHome extends StatelessWidget {
             trailing: IconButton(
               icon: Icon(Icons.arrow_forward_ios),
               onPressed: () {
-                _redirectChat(context);
+                _redirectPage(context, AppConstants.PAGE_CHAT);
+              },
+            ),
+          ),
+          ListTile(
+            title: Text('Página de Profile'),
+            trailing: IconButton(
+              icon: Icon(Icons.arrow_forward_ios),
+              onPressed: () {
+                _redirectPage(context, AppConstants.PAGE_PROFILE);
+              },
+            ),
+          ),
+          ListTile(
+            title: Text('Página de Stateful'),
+            trailing: IconButton(
+              icon: Icon(Icons.arrow_forward_ios),
+              onPressed: () {
+                _redirectPage(context, AppConstants.PAGE_STATEFUL);
               },
             ),
           ),
@@ -34,16 +52,15 @@ class PageHome extends StatelessWidget {
             trailing: IconButton(
               icon: Icon(Icons.arrow_forward_ios),
               onPressed: () {
-                _redirectChat(context);
+                _redirectPage(context, 'chat');
               },
             ),
           );
         });
   }
 
-  void _redirectChat(BuildContext context) {
-    print('Nos vamos al chat');
+  void _redirectPage(BuildContext context, String page) {
     // Navigator.push(context, MaterialPageRoute(builder: (_) => PageChat()));
-    Navigator.pushNamed(context, 'chat');
+    Navigator.pushNamed(context, page);
   }
 }
