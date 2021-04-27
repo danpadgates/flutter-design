@@ -1,11 +1,10 @@
-import 'package:appprueba/pages/page_chat/page_chat.dart';
 import 'package:flutter/material.dart';
 
-import 'package:appprueba/tareas/cy_tarea.dart';
-import 'package:appprueba/tareas/sebas_tarea.dart';
-import 'package:appprueba/tareas/daniel_tarea.dart';
+import 'package:appprueba/routes/app_routing.dart';
 
-import 'package:appprueba/pages/page_profile/page_profile.dart';
+// import 'package:appprueba/tareas/cy_tarea.dart';
+// import 'package:appprueba/tareas/sebas_tarea.dart';
+// import 'package:appprueba/tareas/daniel_tarea.dart';
 
 class MyApp extends StatelessWidget {
   final bool showBanner;
@@ -13,28 +12,10 @@ class MyApp extends StatelessWidget {
   MyApp({this.showBanner});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Mi aplicación',
-        home: PageChat());
-  }
-
-  Widget _myRow() => Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Icon(
-            Icons.home,
-            color: Colors.white,
-          ),
-          Icon(
-            Icons.search,
-            color: Colors.grey,
-          ),
-          Icon(
-            Icons.file_copy,
-            color: Colors.grey,
-          ),
-        ],
+        routes: applicationRoutes(),
+        initialRoute: 'home',
       );
 }
